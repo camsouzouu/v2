@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+{% block contenu %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">{{ article.title }}</li>
+        </ol>
+    </nav>
+    <div class="row">
+    <div class="col-6">
+        <img class="img-fluid" src="{{ asset('../uploads/images/articles/' ~article.image) }}" ><br>
+        <h3>  {{ article.author }}</h3><bR>
+        <a CLASS="btn btn-outline-danger" href="{{ path('article_index')}}">      Retour aux articles</a>
+    </div>
+    <div class="col-6">
+          {% if article.date %}{{ article.date|date('Y-m-d ') }}{% endif %}
+
+        {{ article.contenu }}
+
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

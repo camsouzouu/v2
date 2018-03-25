@@ -1,0 +1,39 @@
+{% extends 'layout.html.twig' %}
+{% block contenu %}
+
+
+
+    <div class="row d-flex justify-content-center">
+    {% for partenaire in partenaires %}
+
+
+
+        <div class="card">
+
+            <img class="card-img-top "  style="width: 18rem;"src="{{ asset('../uploads/images/partenaires/' ~partenaire.image) }}" >
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{ partenaire.prenom }}
+                    <br>
+                </h5>
+                <small class="text-muted">   {{ partenaire.email}}</small><br>
+
+                {{ partenaire.lienFaceBook }}<br>
+                {{ partenaire.lienTwitter }}<br>
+                {{ partenaire.lienSiteWeb }}<br>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+    {% endfor %}  </div>
+{% endblock %}

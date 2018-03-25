@@ -1,0 +1,28 @@
+app_dedi:
+    resource: "@AppBundle/Controller/DediController.php"
+    type:     annotation
+
+article:
+    resource: '@AppBundle/Controller/ArticleController.php'
+    type: annotation
+    prefix:   /article
+
+partenaire:
+    resource: '@AppBundle/Controller/PartenaireController.php'
+    type: annotation
+    prefix:   /partenaire
+
+contact:
+    resource: '@AppBundle/Controller/ContactController.php'
+    type: annotation
+    prefix:   /contact
+
+dedicace:
+    resource: '@AppBundle/Controller/DediController.php'
+    type: annotation
+    prefix:   /dedicace
+
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /admin
