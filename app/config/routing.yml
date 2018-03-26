@@ -7,6 +7,11 @@ article:
     type: annotation
     prefix:   /article
 
+home:
+    resource: '@AppBundle/Controller/HomeController.php'
+    type: annotation
+    prefix:   /
+
 partenaire:
     resource: '@AppBundle/Controller/PartenaireController.php'
     type: annotation

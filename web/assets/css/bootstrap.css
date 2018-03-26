@@ -168,7 +168,7 @@ a {
 }
 
 a:hover {
-  color: #0056b3;
+  color: red;
   text-decoration: underline;
 }
 
@@ -3855,11 +3855,11 @@ tbody.collapse.show {
 }
 
 .nav-link:hover, .nav-link:focus {
-  text-decoration: none;
+  color:red;
 }
 
 .nav-link.disabled {
-  color: #6c757d;
+  color: red;
 }
 
 .nav-tabs {
@@ -4440,6 +4440,7 @@ tbody.collapse.show {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  margin: 15px;
 }
 
 .card > hr {
@@ -6145,7 +6146,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #202225 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
