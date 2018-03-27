@@ -1,53 +1,51 @@
 {% extends 'layout.html.twig' %}
+{% block intro %}
 
-{% block contenu %}
+    <!-- Banner -->
+    <section id="banner">
+        <header>
+            <h2>Futur carrousel</h2>
 
-            {% for c in carrousels %}
+        </header>
+    </section>
 
+    <!-- Intro -->
+    <section id="intro" class="container">
+        <div class="row">
+            <div class="4u 12u(mobile)">
+                <section class="first">
 
-        {% endfor %}
-
-    <header>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                {% for c in carrousels %}
-
-
-                <div class="carousel-item
-                    {% if( loop.index)==1   %}
-                            active
-                        {% endif  %}
-
-                    " style="background-image: url('{{ asset('../uploads/images/carrousels/' ~c.image) }}')">
-
-
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>{{ c.description }}</h3>
-
-                    </div>
-                </div>
-                {% endfor %}
+                    <header>
+                        <h2>Top des musiques</h2>
+                    </header>
+                    <p>Sofiane - Loup garou </p><br>
+                    <p>Sofiane - Bashaw </p><br>
+                    <p>Sofiane - Lundi </p><br>
+                    <p>Sofiane - Mon p'tit Loup</p><br>
+                </section>
             </div>
+            <div class="4u 12u(mobile)">
+                <section class="middle">
 
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
 
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpunchradio43%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+
+                </section>
+            </div>
+            <div class="4u 12u(mobile)">
+                <section class="last">
+                    <header>
+                        <h2>Top des musiques</h2>
+                    </header>
+                    <p>Sofiane - Loup garou </p><br>
+                    <p>Sofiane - Bashaw </p><br>
+                    <p>Sofiane - Lundi </p><br>
+                    <p>Sofiane - Mon p'tit Loup</p><br>
+                </section>
+            </div>
         </div>
-    </header>
 
-
-
-
+    </section>
 
 {% endblock %}

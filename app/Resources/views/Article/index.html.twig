@@ -1,28 +1,32 @@
 {% extends 'layout.html.twig' %}
 {% block contenu %}
-<div class="container">
-    <div class="row d-flex justify-content-center">
+    <div id="main-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="12u">
+                    <section>
+                        <header class="major">
+                            <h2>Articles</h2>
+                        </header>
+                        <div class="row">
     {% for article in articles %}
-
-
-
-                    <div class="card">
-
-                    <img class="card-img-top "  style="width: 18rem;" src="{{ asset('../uploads/images/articles/' ~article.image) }}" >
-                    <div class="card-body">
-                        <h5 class="card-title"> {{ article.author }}</h5>
-                        <small class="text-muted">      {% if article.date %}{{ article.date|date('Y-m-d ') }}{% endif %}</small><br>
-                        <a href="{{ path('article_show', { 'id': article.id }) }}" class="btn btn-outline-danger">Lire l'article</a>
-
-                    </div>
-
-                </div>
-
-
+                            <div class="4u 12u(mobile)">
+                                <section class="box">
+                                    <a href="#" class="image featured"><img src="{{ asset('../uploads/images/articles/' ~article.image) }}" alt="" /></a>
+                                    <header>
+                                        <h3>{{ article.author }}</h3>
+                                    </header>
+                                    <p> {% if article.date %}{{ article.date|date('Y-m-d ') }}{% endif %}</p>
+                                    <footer>
+                                        <a href="{{ path('article_show', { 'id': article.id }) }}" class="button alt">Lire l'article</a>
+                                    </footer>
+                                </section>
+                            </div>
     {% endfor %}
-
-
-
-</div>
-</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

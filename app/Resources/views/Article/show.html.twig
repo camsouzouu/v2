@@ -1,38 +1,31 @@
 {% extends 'layout.html.twig' %}
 {% block contenu %}
-    <div class="container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">{{ article.title }}</li>
-        </ol>
-    </nav>
-    <div class="row">
-    <div class="col-6">
-        <img class="img-fluid" src="{{ asset('../uploads/images/articles/' ~article.image) }}" ><br>
-        <h3>  {{ article.author }}</h3><bR>
-        <a CLASS="btn btn-outline-danger" href="{{ path('article_index')}}">      Retour aux articles</a>
+    <div id="main-wrapper">
+        <div class="container">
+
+            <!-- Content -->
+            <article class="box post">
+                <a href="#" class="image featured " style="width:  5    0%"><img src="{{ asset('../uploads/images/articles/' ~article.image) }}" alt="" /></a>
+                <header>
+                    <h2>{{ article.title }}</h2>
+                    <p> {% if article.date %}{{ article.date|date('Y-m-d ') }}{% endif %}</p>
+                             <h3>  {{ article.author }}</h3>
+                </header>
+                <p>
+                    {{ article.contenu }}
+                </p>
+                <p>
+
+                </p>
+<P>   <a CLASS="button alt" href="{{ path('article_index')}}">      Retour aux articles</a></P>
+
+            </article>
+
+        </div>
     </div>
-    <div class="col-6">
-          {% if article.date %}{{ article.date|date('Y-m-d ') }}{% endif %}
-
-        {{ article.contenu }}
-
-
-
-    </div>
-    </div>
 
 
 
 
-
-
-
-
-
-
-
-
-</div>
 
 {% endblock %}

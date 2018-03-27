@@ -1,12 +1,24 @@
 {% extends 'layout.html.twig' %}
-
 {% block contenu %}
+        <div id="main-wrapper">
 <div class="container">
+    <div class="row">
+        <div class="12u">
+            <section>
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Envoyer" />
-    {{ form_end(form) }}
+                                                <header class="major">
+                                                        <h2>Contacts</h2>
+                                                </header>
+                                                    {{ form_start(form) }}
+                                                    {{ form_widget(form) }}
+                                                       <br> <input type="submit" value="Envoyer" />
+                                                    {{ form_end(form) }}
+
+
+</section>
+        </div>
+    </div>
 </div>
+        </div>
 
 {% endblock %}

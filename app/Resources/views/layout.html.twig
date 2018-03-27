@@ -1,50 +1,137 @@
-
 <html>
 <head>
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('assets/css/full-slider.css') }}" type="text/css">
+
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href=" {{ path('home_index')}}">Punchradio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link " href="{{ path('contact_index')}}">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href=" {{ path('article_index')}}">Articles</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('dedicace_new')}}">Dédicaces</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('partenaire_index')}}">Partenaires</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link " href="#">L'équipe</a>
-                </li>
 
 
-            </ul>
+<body class="homepage">
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <div id="header-wrapper">
+        <div id="header">
+
+            <!-- Logo -->
+            <h1><a href="index.html">Punchradio</a></h1>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li class="current"><a href=" {{ path('home_index')}}">Home</a></li>
+                    <li><a href="{{ path('article_index')}}">Articles</a></li>
+                    <li><a href="{{ path('dedicace_new')}}">Dédicaces</a></li>
+                    <li><a href="{{ path('partenaire_index')}}">Contact</a></li>
+                    <li><a href="{{ path('partenaire_index')}}">L'équipe</a></li>
+                </ul>
+            </nav>
+
+            {% block intro  %}
+            {% endblock %}
+
         </div>
-    </nav>
+    </div>
+
+    <!-- Main -->
+    {% block contenu %}
+    {% endblock %}
 
 
-{% block contenu %}
-{% endblock %}
+
+    <!-- Footer -->
+    <div id="footer-wrapper">
+        <section id="footer" class="container">
+            <div class="row">
+
+
+            </div>
+            <div class="row">
+                <div class="4u 12u(mobile)">
+                    <header>
+                        <h2>Lien</h2>
+                    </header>
+                    <ul class="social">
+                        <li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
+                        <li><a class="icon fa-youtube" href="#"><span class="label">Youtube</span></a></li>
+                        <li><a class="icon fa-linkedin" href="#"><span class="label">LinkedIn</span></a></li>
+                        <li><a class="icon fa-google-plus" href="#"><span class="label">Google+</span></a></li>
+                    </ul>
+                </div>
+                <div class="4u 12u(mobile)">
+                    <section>
+                        <header>
+                            <h2>Liens</h2>
+                        </header>
+                        <ul class="divided">
+                            <li class="current"><a href=" {{ path('home_index')}}">Home</a></li>
+                            <li><a href="{{ path('article_index')}}">Articles</a></li>
+                            <li><a href="{{ path('dedicace_new')}}">Dédicaces</a></li>
+                            <li><a href="{{ path('partenaire_index')}}">Contact</a></li>
+                            <li><a href="{{ path('partenaire_index')}}">L'équipe</a></li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="4u 12u(mobile)">
+                    <section>
+                        <header>
+                            <h2>Lien</h2>
+                        </header>
+
+                        <ul class="contact">
+                            <li>
+                                <h3>Address</h3>
+                                <p>
+                                    Untitled Incorporated<br />
+                                    1234 Somewhere Road Suite<br />
+                                    Nashville, TN 00000-0000
+                                </p>
+                            </li>
+                            <li>
+                                <h3>Mail</h3>
+                                <p><a href="#">someone@untitled.tld</a></p>
+                            </li>
+                            <li>
+                                <h3>Phone</h3>
+                                <p>(800) 000-0000</p>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="12u">
+
+                    <!-- Copyright -->
+                    <div id="copyright">
+                        <ul class="links">
+                            <li>Back-End :  Camille ISLASSE </li><li>Design : <a href="http://html5up.net">HTML5 UP</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+</div>
 
 
 
-<script src="{{ asset('assets/js/bootstrap.js') }}"></script>
+
+
+
+
+
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.dropotron.min.js')}}"></script>
+    <script src="{{ asset('assets/js/skel.min.js')}}"></script>
+    <script src="{{ asset('assets/js/skel-viewport.min.js')}}"></script>
+    <script src="{{ asset('assets/js/util.js')}}"></script>
+    <!--[if lte IE 8]><script src="{{ asset('assets/js/ie/respond.min.js')}}"></script><![endif]-->
+    <script src="{{ asset('assets/js/main.js')}}"></script>
+
 
 </body>
 </html>

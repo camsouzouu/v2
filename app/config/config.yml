@@ -113,7 +113,7 @@ easy_admin:
             class: AppBundle\Entity\Partenaire
             list:
                 fields:
-                    - { property: 'image', type: 'image', base_path: '%app.path.article_images%' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.partenaire_images%' }
                     - prenom
                     - lienFaceBook
                     - lienSiteWeb
@@ -124,15 +124,12 @@ easy_admin:
 
             show:
                 fields:
-                    - { property: 'image', type: 'image', base_path: '%app.path.article_images%' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.partenaire_images%' }
                     - prenom
                     - lienFaceBook
                     - lienSiteWeb
                     - lienTwitter
                     - email
-
-
-
 
             form:
                 fields:
